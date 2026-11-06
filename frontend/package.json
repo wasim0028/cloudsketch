@@ -1,0 +1,36 @@
+{
+  "name": "cloudsketch-frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "grammar": "peggy --format es -o src/dsl/parser.js ../grammar/diagram.peggy",
+    "predev": "npm run grammar",
+    "prebuild": "npm run grammar",
+    "dev": "vite --host",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "import-icons": "node scripts/import-icons.mjs"
+  },
+  "dependencies": {
+    "@codemirror/state": "^6.7.6",
+    "@codemirror/view": "^6.43.15",
+    "@xyflow/react": "^12.12.1",
+    "codemirror": "^6.0.2",
+    "elkjs": "^0.12.1",
+    "gifenc": "^1.0.3",
+    "html-to-image": "^1.11.13",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "oxlint": "^1.90.0",
+    "peggy": "^5.1.1",
+    "typescript": "~7.0.2",
+    "vite": "^8.3.6"
+  }
+}

@@ -1,0 +1,434 @@
+[
+ {
+  "key": "user",
+  "label": "User",
+  "provider": "generic",
+  "category": "person"
+ },
+ {
+  "key": "users",
+  "label": "Users",
+  "provider": "generic",
+  "category": "person"
+ },
+ {
+  "key": "browser",
+  "label": "Browser",
+  "provider": "generic",
+  "category": "client"
+ },
+ {
+  "key": "mobile",
+  "label": "Mobile app",
+  "provider": "generic",
+  "category": "client"
+ },
+ {
+  "key": "internet",
+  "label": "Internet",
+  "provider": "generic",
+  "category": "network"
+ },
+ {
+  "key": "generic-service",
+  "label": "Service",
+  "provider": "generic",
+  "category": "compute"
+ },
+ {
+  "key": "generic-database",
+  "label": "Database",
+  "provider": "generic",
+  "category": "database"
+ },
+ {
+  "key": "generic-queue",
+  "label": "Queue",
+  "provider": "generic",
+  "category": "integration"
+ },
+ {
+  "key": "github-actions",
+  "label": "GitHub Actions",
+  "provider": "generic",
+  "category": "devops"
+ },
+ {
+  "key": "docker",
+  "label": "Docker",
+  "provider": "generic",
+  "category": "devops"
+ },
+ {
+  "key": "kubernetes",
+  "label": "Kubernetes",
+  "provider": "generic",
+  "category": "compute"
+ },
+ {
+  "key": "terraform",
+  "label": "Terraform",
+  "provider": "generic",
+  "category": "devops"
+ },
+ {
+  "key": "prometheus",
+  "label": "Prometheus",
+  "provider": "generic",
+  "category": "monitoring"
+ },
+ {
+  "key": "grafana",
+  "label": "Grafana",
+  "provider": "generic",
+  "category": "monitoring"
+ },
+ {
+  "key": "aws-cloud",
+  "label": "AWS Cloud",
+  "provider": "aws",
+  "category": "group"
+ },
+ {
+  "key": "aws-region",
+  "label": "Region",
+  "provider": "aws",
+  "category": "group"
+ },
+ {
+  "key": "aws-vpc",
+  "label": "VPC",
+  "provider": "aws",
+  "category": "group"
+ },
+ {
+  "key": "aws-subnet-public",
+  "label": "Public subnet",
+  "provider": "aws",
+  "category": "group"
+ },
+ {
+  "key": "aws-subnet-private",
+  "label": "Private subnet",
+  "provider": "aws",
+  "category": "group"
+ },
+ {
+  "key": "aws-elb",
+  "label": "Elastic Load Balancer",
+  "provider": "aws",
+  "category": "network"
+ },
+ {
+  "key": "aws-api-gateway",
+  "label": "API Gateway",
+  "provider": "aws",
+  "category": "network"
+ },
+ {
+  "key": "aws-cloudfront",
+  "label": "CloudFront",
+  "provider": "aws",
+  "category": "network"
+ },
+ {
+  "key": "aws-route53",
+  "label": "Route 53",
+  "provider": "aws",
+  "category": "network"
+ },
+ {
+  "key": "aws-nat-gateway",
+  "label": "NAT gateway",
+  "provider": "aws",
+  "category": "network"
+ },
+ {
+  "key": "aws-ec2",
+  "label": "EC2",
+  "provider": "aws",
+  "category": "compute"
+ },
+ {
+  "key": "aws-eks",
+  "label": "EKS",
+  "provider": "aws",
+  "category": "compute"
+ },
+ {
+  "key": "aws-ecs",
+  "label": "ECS",
+  "provider": "aws",
+  "category": "compute"
+ },
+ {
+  "key": "aws-fargate",
+  "label": "Fargate",
+  "provider": "aws",
+  "category": "compute"
+ },
+ {
+  "key": "aws-lambda",
+  "label": "Lambda",
+  "provider": "aws",
+  "category": "compute"
+ },
+ {
+  "key": "aws-rds",
+  "label": "RDS",
+  "provider": "aws",
+  "category": "database"
+ },
+ {
+  "key": "aws-aurora",
+  "label": "Aurora",
+  "provider": "aws",
+  "category": "database"
+ },
+ {
+  "key": "aws-dynamodb",
+  "label": "DynamoDB",
+  "provider": "aws",
+  "category": "database"
+ },
+ {
+  "key": "aws-elasticache",
+  "label": "ElastiCache",
+  "provider": "aws",
+  "category": "database"
+ },
+ {
+  "key": "aws-s3",
+  "label": "S3",
+  "provider": "aws",
+  "category": "storage"
+ },
+ {
+  "key": "aws-sqs",
+  "label": "SQS",
+  "provider": "aws",
+  "category": "integration"
+ },
+ {
+  "key": "aws-sns",
+  "label": "SNS",
+  "provider": "aws",
+  "category": "integration"
+ },
+ {
+  "key": "aws-eventbridge",
+  "label": "EventBridge",
+  "provider": "aws",
+  "category": "integration"
+ },
+ {
+  "key": "aws-kinesis",
+  "label": "Kinesis",
+  "provider": "aws",
+  "category": "analytics"
+ },
+ {
+  "key": "aws-cloudwatch",
+  "label": "CloudWatch",
+  "provider": "aws",
+  "category": "monitoring"
+ },
+ {
+  "key": "aws-iam",
+  "label": "IAM",
+  "provider": "aws",
+  "category": "security"
+ },
+ {
+  "key": "aws-cognito",
+  "label": "Cognito",
+  "provider": "aws",
+  "category": "security"
+ },
+ {
+  "key": "aws-waf",
+  "label": "WAF",
+  "provider": "aws",
+  "category": "security"
+ },
+ {
+  "key": "aws-secrets-manager",
+  "label": "Secrets Manager",
+  "provider": "aws",
+  "category": "security"
+ },
+ {
+  "key": "aws-ecr",
+  "label": "ECR",
+  "provider": "aws",
+  "category": "devops"
+ },
+ {
+  "key": "gcp-cloud",
+  "label": "Google Cloud",
+  "provider": "gcp",
+  "category": "group"
+ },
+ {
+  "key": "gcp-vpc",
+  "label": "VPC",
+  "provider": "gcp",
+  "category": "group"
+ },
+ {
+  "key": "gcp-load-balancing",
+  "label": "Cloud Load Balancing",
+  "provider": "gcp",
+  "category": "network"
+ },
+ {
+  "key": "gcp-gke",
+  "label": "GKE",
+  "provider": "gcp",
+  "category": "compute"
+ },
+ {
+  "key": "gcp-cloud-run",
+  "label": "Cloud Run",
+  "provider": "gcp",
+  "category": "compute"
+ },
+ {
+  "key": "gcp-cloud-functions",
+  "label": "Cloud Functions",
+  "provider": "gcp",
+  "category": "compute"
+ },
+ {
+  "key": "gcp-compute-engine",
+  "label": "Compute Engine",
+  "provider": "gcp",
+  "category": "compute"
+ },
+ {
+  "key": "gcp-cloud-sql",
+  "label": "Cloud SQL",
+  "provider": "gcp",
+  "category": "database"
+ },
+ {
+  "key": "gcp-firestore",
+  "label": "Firestore",
+  "provider": "gcp",
+  "category": "database"
+ },
+ {
+  "key": "gcp-memorystore",
+  "label": "Memorystore",
+  "provider": "gcp",
+  "category": "database"
+ },
+ {
+  "key": "gcp-bigquery",
+  "label": "BigQuery",
+  "provider": "gcp",
+  "category": "analytics"
+ },
+ {
+  "key": "gcp-cloud-storage",
+  "label": "Cloud Storage",
+  "provider": "gcp",
+  "category": "storage"
+ },
+ {
+  "key": "gcp-pubsub",
+  "label": "Pub/Sub",
+  "provider": "gcp",
+  "category": "integration"
+ },
+ {
+  "key": "azure-cloud",
+  "label": "Azure",
+  "provider": "azure",
+  "category": "group"
+ },
+ {
+  "key": "azure-vnet",
+  "label": "Virtual network",
+  "provider": "azure",
+  "category": "group"
+ },
+ {
+  "key": "azure-front-door",
+  "label": "Front Door",
+  "provider": "azure",
+  "category": "network"
+ },
+ {
+  "key": "azure-app-gateway",
+  "label": "Application Gateway",
+  "provider": "azure",
+  "category": "network"
+ },
+ {
+  "key": "azure-aks",
+  "label": "AKS",
+  "provider": "azure",
+  "category": "compute"
+ },
+ {
+  "key": "azure-app-service",
+  "label": "App Service",
+  "provider": "azure",
+  "category": "compute"
+ },
+ {
+  "key": "azure-functions",
+  "label": "Functions",
+  "provider": "azure",
+  "category": "compute"
+ },
+ {
+  "key": "azure-vm",
+  "label": "Virtual machine",
+  "provider": "azure",
+  "category": "compute"
+ },
+ {
+  "key": "azure-sql",
+  "label": "Azure SQL",
+  "provider": "azure",
+  "category": "database"
+ },
+ {
+  "key": "azure-cosmos-db",
+  "label": "Cosmos DB",
+  "provider": "azure",
+  "category": "database"
+ },
+ {
+  "key": "azure-cache-redis",
+  "label": "Cache for Redis",
+  "provider": "azure",
+  "category": "database"
+ },
+ {
+  "key": "azure-blob-storage",
+  "label": "Blob Storage",
+  "provider": "azure",
+  "category": "storage"
+ },
+ {
+  "key": "azure-service-bus",
+  "label": "Service Bus",
+  "provider": "azure",
+  "category": "integration"
+ },
+ {
+  "key": "azure-monitor",
+  "label": "Monitor",
+  "provider": "azure",
+  "category": "monitoring"
+ },
+ {
+  "key": "azure-key-vault",
+  "label": "Key Vault",
+  "provider": "azure",
+  "category": "security"
+ }
+]

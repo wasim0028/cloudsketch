@@ -1,0 +1,19 @@
+{
+  "name": "cloudsketch-grammar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "parser.mjs",
+  "scripts": {
+    "build": "peggy --format es -o parser.mjs diagram.peggy",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "start": "node server.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "type": "module",
+  "devDependencies": {
+    "peggy": "^4.2.0"
+  }
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "prompt": "Users hit an ALB that routes to an EKS cluster in a private subnet, which reads from RDS Postgres and caches in ElastiCache.",
+    "dsl": "User [icon: user]\nAWS [icon: aws-cloud] {\n  VPC [icon: aws-vpc] {\n    PublicSubnet [icon: aws-subnet-public] {\n      ALB [icon: aws-elb, label: \"Application LB\"]\n    }\n    PrivateSubnet [icon: aws-subnet-private] {\n      EKS [icon: aws-eks, label: \"App cluster\"]\n      RDS [icon: aws-rds, label: \"Postgres\"]\n      Cache [icon: aws-elasticache, label: \"Redis\"]\n    }\n  }\n}\nUser > ALB: \"HTTPS\"\nALB > EKS\nEKS > RDS\nEKS > Cache"
+  },
+  {
+    "prompt": "Serverless image pipeline: users upload via API Gateway to a Lambda that stores files in S3; S3 events go to SQS, a worker Lambda creates thumbnails and writes metadata to DynamoDB. Logs in CloudWatch.",
+    "dsl": "User [icon: user]\nAWS [icon: aws-cloud] {\n  Api [icon: aws-api-gateway, label: \"Upload API\"]\n  UploadFn [icon: aws-lambda, label: \"Upload\"]\n  Bucket [icon: aws-s3, label: \"Images\"]\n  Queue [icon: aws-sqs, label: \"Image events\"]\n  ThumbFn [icon: aws-lambda, label: \"Thumbnailer\"]\n  Metadata [icon: aws-dynamodb, label: \"Metadata\"]\n  Logs [icon: aws-cloudwatch, label: \"Logs\"]\n}\nUser > Api: \"HTTPS\"\nApi > UploadFn > Bucket\nBucket > Queue: \"ObjectCreated\"\nQueue > ThumbFn\nThumbFn > Bucket\nThumbFn > Metadata\nUploadFn > Logs\nThumbFn > Logs"
+  },
+  {
+    "prompt": "GCP: global load balancer in front of Cloud Run services, Cloud SQL Postgres, Pub/Sub to a GKE worker pool that writes to BigQuery.",
+    "dsl": "User [icon: user]\nGCP [icon: gcp-cloud] {\n  LB [icon: gcp-load-balancing, label: \"Global LB\"]\n  Web [icon: gcp-cloud-run, label: \"Web service\"]\n  DB [icon: gcp-cloud-sql, label: \"Postgres\"]\n  Events [icon: gcp-pubsub, label: \"Events\"]\n  Workers [icon: gcp-gke, label: \"Workers\"]\n  Warehouse [icon: gcp-bigquery, label: \"Analytics\"]\n}\nUser > LB: \"HTTPS\"\nLB > Web\nWeb > DB\nWeb > Events > Workers > Warehouse"
+  },
+  {
+    "prompt": "Azure: Front Door to AKS, AKS uses Azure SQL and Cache for Redis, secrets from Key Vault, async jobs via Service Bus to Functions.",
+    "dsl": "User [icon: user]\nAzure [icon: azure-cloud] {\n  FrontDoor [icon: azure-front-door, label: \"Front Door\"]\n  VNet [icon: azure-vnet] {\n    AKS [icon: azure-aks, label: \"App cluster\"]\n    SQL [icon: azure-sql, label: \"Azure SQL\"]\n    Cache [icon: azure-cache-redis, label: \"Redis\"]\n  }\n  Vault [icon: azure-key-vault, label: \"Secrets\"]\n  Bus [icon: azure-service-bus, label: \"Jobs\"]\n  Jobs [icon: azure-functions, label: \"Job runner\"]\n}\nUser > FrontDoor: \"HTTPS\"\nFrontDoor > AKS\nAKS > SQL\nAKS > Cache\nAKS > Vault\nAKS > Bus > Jobs"
+  }
+]

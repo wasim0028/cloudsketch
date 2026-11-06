@@ -1,0 +1,22 @@
+[
+  {"id": "aws-3tier", "prompt": "Classic three-tier app on AWS: CloudFront and an ALB in a public subnet, EC2 app servers in a private subnet, Aurora Postgres in a database subnet.", "expect": ["aws-cloudfront", "aws-elb", "aws-ec2", "aws-aurora"]},
+  {"id": "aws-eks-basic", "prompt": "Users hit an ALB that routes to an EKS cluster which uses RDS Postgres and ElastiCache Redis.", "expect": ["aws-elb", "aws-eks", "aws-rds", "aws-elasticache"]},
+  {"id": "aws-serverless-api", "prompt": "Serverless REST API: API Gateway, Lambda functions, DynamoDB table, Cognito for auth.", "expect": ["aws-api-gateway", "aws-lambda", "aws-dynamodb", "aws-cognito"]},
+  {"id": "aws-event-driven", "prompt": "Orders service on ECS Fargate publishes to EventBridge; rules fan out to SQS queues consumed by Lambda workers for billing and shipping.", "expect": ["aws-fargate", "aws-eventbridge", "aws-sqs", "aws-lambda"]},
+  {"id": "aws-data-lake", "prompt": "Clickstream data goes into Kinesis, lands in S3, and is queried later; monitoring with CloudWatch.", "expect": ["aws-kinesis", "aws-s3", "aws-cloudwatch"]},
+  {"id": "aws-static-site", "prompt": "Static website: Route 53 DNS, CloudFront CDN, S3 bucket origin, WAF in front.", "expect": ["aws-route53", "aws-cloudfront", "aws-s3", "aws-waf"]},
+  {"id": "aws-multi-az", "prompt": "Highly available web app across two availability zones in one VPC, each AZ with a public subnet with a NAT gateway and a private subnet with EC2, shared RDS.", "expect": ["aws-vpc", "aws-nat-gateway", "aws-ec2", "aws-rds"]},
+  {"id": "aws-cicd", "prompt": "CI/CD: GitHub Actions builds Docker images, pushes to ECR, and deploys to EKS using Terraform-managed infrastructure.", "expect": ["github-actions", "aws-ecr", "aws-eks", "terraform"]},
+  {"id": "gcp-cloudrun", "prompt": "GCP: Cloud Load Balancing to Cloud Run services, Cloud SQL Postgres, Memorystore Redis.", "expect": ["gcp-load-balancing", "gcp-cloud-run", "gcp-cloud-sql", "gcp-memorystore"]},
+  {"id": "gcp-analytics", "prompt": "GCP analytics pipeline: apps publish events to Pub/Sub, Cloud Functions transform them, results in BigQuery, raw files in Cloud Storage.", "expect": ["gcp-pubsub", "gcp-cloud-functions", "gcp-bigquery", "gcp-cloud-storage"]},
+  {"id": "gcp-gke", "prompt": "GKE cluster behind a global load balancer with Firestore as the database.", "expect": ["gcp-gke", "gcp-load-balancing", "gcp-firestore"]},
+  {"id": "azure-aks", "prompt": "Azure: Front Door to AKS, AKS reads Azure SQL and Cache for Redis, secrets in Key Vault.", "expect": ["azure-front-door", "azure-aks", "azure-sql", "azure-cache-redis", "azure-key-vault"]},
+  {"id": "azure-functions", "prompt": "Azure serverless: App Service web front end, Service Bus queue, Functions workers, Cosmos DB, Blob Storage for uploads.", "expect": ["azure-app-service", "azure-service-bus", "azure-functions", "azure-cosmos-db", "azure-blob-storage"]},
+  {"id": "azure-vms", "prompt": "Lift-and-shift on Azure: Application Gateway in a VNet in front of two virtual machines, Azure Monitor for logs.", "expect": ["azure-app-gateway", "azure-vnet", "azure-vm", "azure-monitor"]},
+  {"id": "k8s-observability", "prompt": "Kubernetes workloads scraped by Prometheus, dashboards in Grafana, alerts to an on-call team.", "expect": ["kubernetes", "prometheus", "grafana"]},
+  {"id": "hybrid", "prompt": "Mobile app and browser clients call an API Gateway on AWS; Lambda calls a GCP BigQuery dataset for reporting.", "expect": ["mobile", "browser", "aws-api-gateway", "aws-lambda", "gcp-bigquery"]},
+  {"id": "vague", "prompt": "A typical startup backend.", "expect": []},
+  {"id": "large", "prompt": "E-commerce platform on AWS: CloudFront, WAF, ALB, EKS with separate services for catalog, cart, orders, payments, and search; Aurora for orders, DynamoDB for carts, ElastiCache, OpenSearch-like search service, SQS between orders and payments, SNS notifications, S3 for images, Cognito auth, CloudWatch monitoring, Secrets Manager.", "expect": ["aws-cloudfront", "aws-waf", "aws-elb", "aws-eks", "aws-aurora", "aws-dynamodb", "aws-sqs", "aws-sns", "aws-s3", "aws-cognito"]},
+  {"id": "unknown-tech", "prompt": "Kafka cluster feeding a Flink job that writes to ClickHouse, all on EC2.", "expect": ["aws-ec2"]},
+  {"id": "edit-like", "prompt": "Users -> API -> database. Also add a Redis cache between API and database and a background worker reading from a queue.", "expect": []}
+]

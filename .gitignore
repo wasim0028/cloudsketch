@@ -1,0 +1,10 @@
+.env
+node_modules/
+dist/
+__pycache__/
+.pytest_cache/
+*.db
+grammar/parser.mjs
+frontend/src/dsl/parser.js
+eval/results/
+frontend/public/icons/*.svg
